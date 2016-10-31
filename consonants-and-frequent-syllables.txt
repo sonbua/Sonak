@@ -1,0 +1,46 @@
+. . . . .       . . . . .
+. . . . .       . . . . .
+. . . . .       . . . . .
+
+S (pre): ST, SH, SL, SC, SP, SK, SQ,
+N (pre): NT, NH, ND, NG,
+R (pre): RT, RD, RG,                  R (post): TR, DR, CR, WR, FR, GR, PR, BR,
+C (pre): CH, CR, CL,                  C (post): SC,
+T (pre): TH, TR,                      T (post): NT, ST, RT,                    
+D (pre): DR,                          D (post): ND, RD, LD,
+L (pre): LD,                          L (post): SL, CL, FL, GL, PL, BL,
+H (pre):                              H (post): TH, NH, SH, CH, WH, GH, PH, KH,
+
+--- en  		--- vi
+TH	3.99		NG	6.04
+ND	1.62		NH	2.95
+NG	0.99		CH	2.27
+ST	0.96		TH	1.93
+NT	0.77		TR	1.59
+LD  			KH	1.33
+				PH	0.69
+
+T	9.37		N	11.01
+N	6.8			H	7.95
+S	6.11		C	6.71
+H	6.11		T	6.6
+R	5.68		G	5.29
+L	4.24		D	3.97
+D	4.14		M	2.97
+C	2.73		R	2.32
+M	2.53		V	2.12
+W	2.34		L	1.9
+F	2.03		S	1.56
+G	1.92		B	1.5
+P	1.66		K	1.32
+B	1.54		P	1.06
+V	1.06		Q	0.34
+K	0.87		X	0.33
+J	0.23			
+X	0.2			
+Q	0.09			
+Z	0.06			
+
+References:
+http://www.sttmedia.com/characterfrequencies
+http://www.sttmedia.com/syllablefrequencies
