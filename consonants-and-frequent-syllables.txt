@@ -11,7 +11,7 @@ D (pre): DR,                          D (post): ND, RD, LD,
 L (pre): LD,                          L (post): SL, CL, FL, GL, PL, BL,
 H (pre):                              H (post): TH, NH, SH, CH, WH, GH, PH, KH,
 
---- en  		--- vi
+--- en          --- vi
 TH  3.99        NG  6.04
 ND  1.62        NH  2.95
 NG  0.99        CH  2.27
