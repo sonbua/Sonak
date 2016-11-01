@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7F9DD340-6994-4FD6-B87E-3E03C0E0DD13}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FingerMovingSimulation</RootNamespace>
+    <AssemblyName>FingerMovingSimulation</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Consts.cs" />
+    <Compile Include="Core\Hands\IFinger.cs" />
+    <Compile Include="Core\Hands\IKeyState.cs" />
+    <Compile Include="Core\Keys.cs" />
+    <Compile Include="Core\Expanders\CharacterComponents.cs" />
+    <Compile Include="Core\Expanders\IToneMapper.cs" />
+    <Compile Include="Core\Expanders\IVietnameseCharacterExpander.cs" />
+    <Compile Include="Core\Expanders\Tones.cs" />
+    <Compile Include="Core\Hands\Colemak\Fingers\Left\ILeftIndexFingerKeyState.cs" />
+    <Compile Include="Core\Hands\Colemak\Fingers\Left\ILeftLittleFingerKeyState.cs" />
+    <Compile Include="Core\Hands\Colemak\Fingers\Left\ILeftMiddleFingerKeyState.cs" />
+    <Compile Include="Core\Hands\Colemak\Fingers\Left\ILeftRingFingerKeyState.cs" />
+    <Compile Include="Core\Hands\Colemak\Fingers\Right\IRightIndexFingerKeyState.cs" />
+    <Compile Include="Core\Hands\Colemak\Fingers\Right\IRightLittleFingerKeyState.cs" />
+    <Compile Include="Core\Hands\Colemak\Fingers\Right\IRightMiddleFingerKeyState.cs" />
+    <Compile Include="Core\Hands\Colemak\Fingers\Right\IRightRingFingerKeyState.cs" />
+    <Compile Include="Core\Hands\Dvorak\Fingers\Left\ILeftIndexFingerKeyState.cs" />
+    <Compile Include="Core\Hands\Dvorak\Fingers\Left\ILeftLittleFingerKeyState.cs" />
+    <Compile Include="Core\Hands\Dvorak\Fingers\Left\ILeftMiddleFingerKeyState.cs" />
+    <Compile Include="Core\Hands\Dvorak\Fingers\Left\ILeftRingFingerKeyState.cs" />
+    <Compile Include="Core\Hands\Dvorak\Fingers\Right\IRightIndexFingerKeyState.cs" />
+    <Compile Include="Core\Hands\Dvorak\Fingers\Right\IRightLittleFingerKeyState.cs" />
+    <Compile Include="Core\Hands\Dvorak\Fingers\Right\IRightMiddleFingerKeyState.cs" />
+    <Compile Include="Core\Hands\Dvorak\Fingers\Right\IRightRingFingerKeyState.cs" />
+    <Compile Include="Core\Hands\IHand.cs" />
+    <Compile Include="Core\Hands\Qwerty\Fingers\Left\ILeftIndexFingerKeyState.cs" />
+    <Compile Include="Core\Hands\Qwerty\Fingers\Left\ILeftLittleFingerKeyState.cs" />
+    <Compile Include="Core\Hands\Qwerty\Fingers\Left\ILeftMiddleFingerKeyState.cs" />
+    <Compile Include="Core\Hands\Qwerty\Fingers\Left\ILeftRingFingerKeyState.cs" />
+    <Compile Include="Core\Hands\Qwerty\Fingers\Right\IRightIndexFingerKeyState.cs" />
+    <Compile Include="Core\Hands\Qwerty\Fingers\Right\IRightLittleFingerKeyState.cs" />
+    <Compile Include="Core\Hands\Qwerty\Fingers\Right\IRightMiddleFingerKeyState.cs" />
+    <Compile Include="Core\Hands\Qwerty\Fingers\Right\IRightRingFingerKeyState.cs" />
+    <Compile Include="Core\ICharacterToLayoutMapper.cs" />
+    <Compile Include="Core\ILayout.cs" />
+    <Compile Include="Core\ITypist.cs" />
+    <Compile Include="Infrastructure\CharacterToLayoutMappers\CharacterToColemakLayoutMapper.cs" />
+    <Compile Include="Infrastructure\CharacterToLayoutMappers\CharacterToDvorakLayoutMapper.cs" />
+    <Compile Include="Infrastructure\CharacterToLayoutMappers\CharacterToQwertyLayoutMapper.cs" />
+    <Compile Include="Infrastructure\Expanders\ToneMappers\CustomToneMapper.cs" />
+    <Compile Include="Infrastructure\Expanders\ToneMappers\DvorakDefaultMapper.cs" />
+    <Compile Include="Infrastructure\Expanders\ToneMappers\TelexMapper.cs" />
+    <Compile Include="Infrastructure\Expanders\VietnameseCharacterExpander.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Left\IndexFinger\BKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Left\IndexFinger\D4KeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Left\IndexFinger\D5KeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Left\IndexFinger\DKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Left\IndexFinger\GKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Left\IndexFinger\LeftIndexFinger.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Left\IndexFinger\PKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Left\IndexFinger\TKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Left\IndexFinger\VKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Left\LittleFinger\AKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Left\LittleFinger\D1KeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Left\LittleFinger\LeftLittleFinger.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Left\LittleFinger\LShiftKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Left\LittleFinger\QKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Left\LittleFinger\ZKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Left\MiddleFinger\CKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Left\MiddleFinger\D3KeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Left\MiddleFinger\FKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Left\MiddleFinger\LeftMiddleFinger.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Left\MiddleFinger\SKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Left\RingFinger\D2KeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Left\RingFinger\LeftRingFinger.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Left\RingFinger\RKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Left\RingFinger\WKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Left\RingFinger\XKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Left\Thumb\LeftThumb.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Right\IndexFinger\D6KeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Right\IndexFinger\D7KeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Right\IndexFinger\HKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Right\IndexFinger\JKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Right\IndexFinger\KKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Right\IndexFinger\LKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Right\IndexFinger\MKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Right\IndexFinger\NKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Right\IndexFinger\RightIndexFinger.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Right\LittleFinger\BackSlashKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Right\LittleFinger\CloseSquareBracketKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Right\LittleFinger\D0KeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Right\LittleFinger\EnterKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Right\LittleFinger\MinusKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Right\LittleFinger\OKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Right\LittleFinger\OpenSquareBracketKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Right\LittleFinger\PipeKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Right\LittleFinger\RightLittleFinger.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Right\LittleFinger\RShiftKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Right\LittleFinger\SemicolonKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Right\LittleFinger\SingleQuoteKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Right\LittleFinger\SlashKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Right\MiddleFinger\CommaKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Right\MiddleFinger\D8KeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Right\MiddleFinger\EKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Right\MiddleFinger\RightMiddleFinger.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Right\MiddleFinger\UKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Right\RingFinger\D9KeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Right\RingFinger\IButtonKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Right\RingFinger\PeriodKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Right\RingFinger\RightRingFinger.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Right\RingFinger\YKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\Fingers\Right\Thumb\RightThumb.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\LeftHand.cs" />
+    <Compile Include="Infrastructure\Hands\Colemak\RightHand.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Left\IndexFinger\D4KeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Left\IndexFinger\D5KeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Left\IndexFinger\IButtonKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Left\IndexFinger\KKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Left\IndexFinger\LeftIndexFinger.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Left\IndexFinger\PKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Left\IndexFinger\UKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Left\IndexFinger\XKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Left\IndexFinger\YKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Left\LittleFinger\AKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Left\LittleFinger\D1KeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Left\LittleFinger\LeftLittleFinger.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Left\LittleFinger\LShiftKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Left\LittleFinger\SemicolonKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Left\LittleFinger\SingleQuoteKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Left\MiddleFinger\D3KeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Left\MiddleFinger\EKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Left\MiddleFinger\JKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Left\MiddleFinger\LeftMiddleFinger.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Left\MiddleFinger\PeriodKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Left\RingFinger\CommaKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Left\RingFinger\D2KeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Left\RingFinger\LeftRingFinger.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Left\RingFinger\OKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Left\RingFinger\QKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Left\Thumb\LeftThumb.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Right\IndexFinger\BKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Right\IndexFinger\D6KeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Right\IndexFinger\D7KeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Right\IndexFinger\DKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Right\IndexFinger\FKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Right\IndexFinger\GKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Right\IndexFinger\HKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Right\IndexFinger\MKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Right\IndexFinger\RightIndexFinger.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Right\LittleFinger\BackSlashKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Right\LittleFinger\CloseSquareBracketKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Right\LittleFinger\D0KeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Right\LittleFinger\EnterKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Right\LittleFinger\LKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Right\LittleFinger\MinusKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Right\LittleFinger\OpenSquareBracketKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Right\LittleFinger\PipeKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Right\LittleFinger\RightLittleFinger.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Right\LittleFinger\RShiftKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Right\LittleFinger\SKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Right\LittleFinger\SlashKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Right\LittleFinger\ZKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Right\MiddleFinger\CKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Right\MiddleFinger\D8KeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Right\MiddleFinger\RightMiddleFinger.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Right\MiddleFinger\TKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Right\MiddleFinger\WKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Right\RingFinger\D9KeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Right\RingFinger\NKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Right\RingFinger\RightRingFinger.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Right\RingFinger\RKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Right\RingFinger\VKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\Fingers\Right\Thumb\RightThumb.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\LeftHand.cs" />
+    <Compile Include="Infrastructure\Hands\Dvorak\RightHand.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Left\IndexFinger\BKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Left\IndexFinger\D4KeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Left\IndexFinger\D5KeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Left\IndexFinger\FKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Left\IndexFinger\GKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Left\IndexFinger\LeftIndexFinger.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Left\IndexFinger\RKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Left\IndexFinger\TKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Left\IndexFinger\VKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Left\LittleFinger\AKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Left\LittleFinger\D1KeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Left\LittleFinger\LeftLittleFinger.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Left\LittleFinger\LShiftKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Left\LittleFinger\QKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Left\LittleFinger\ZKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Left\MiddleFinger\CKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Left\MiddleFinger\D3KeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Left\MiddleFinger\DKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Left\MiddleFinger\EKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Left\MiddleFinger\LeftMiddleFinger.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Left\RingFinger\D2KeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Left\RingFinger\LeftRingFinger.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Left\RingFinger\SKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Left\RingFinger\WKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Left\RingFinger\XKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Left\Thumb\LeftThumb.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Right\IndexFinger\D6KeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Right\IndexFinger\D7KeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Right\IndexFinger\HKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Right\IndexFinger\JKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Right\IndexFinger\MKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Right\IndexFinger\NKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Right\IndexFinger\RightIndexFinger.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Right\IndexFinger\UKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Right\IndexFinger\YKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Right\LittleFinger\BackSlashKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Right\LittleFinger\CloseSquareBracketKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Right\LittleFinger\D0KeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Right\LittleFinger\EnterKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Right\LittleFinger\MinusKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Right\LittleFinger\OpenSquareBracketKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Right\LittleFinger\PipeKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Right\LittleFinger\PKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Right\LittleFinger\RightLittleFinger.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Right\LittleFinger\RShiftKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Right\LittleFinger\SemicolonKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Right\LittleFinger\SingleQuoteKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Right\LittleFinger\SlashKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Right\MiddleFinger\CommaKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Right\MiddleFinger\D8KeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Right\MiddleFinger\IButtonKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Right\MiddleFinger\KKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Right\MiddleFinger\RightMiddleFinger.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Right\RingFinger\D9KeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Right\RingFinger\LKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Right\RingFinger\OKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Right\RingFinger\PeriodKeyState.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Right\RingFinger\RightRingFinger.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\Fingers\Right\Thumb\RightThumb.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\LeftHand.cs" />
+    <Compile Include="Infrastructure\Hands\Qwerty\RightHand.cs" />
+    <Compile Include="Infrastructure\Layouts\ColemakLayout.cs" />
+    <Compile Include="Infrastructure\Layouts\DvorakLayout.cs" />
+    <Compile Include="Infrastructure\Layouts\QwertyLayout.cs" />
+    <Compile Include="Infrastructure\Typists\ColemakTypist.cs" />
+    <Compile Include="Infrastructure\Typists\DvorakTypist.cs" />
+    <Compile Include="Infrastructure\Typists\QwertyTypist.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\MiscUtil\MiscUtil.csproj">
+      <Project>{854230D7-7029-4D7C-8EAB-1AA42BB481C5}</Project>
+      <Name>MiscUtil</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
