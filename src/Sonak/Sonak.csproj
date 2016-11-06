@@ -5,11 +5,11 @@
     <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5DE2B9C8-744E-4152-BA96-658757F5C7C5}</ProjectGuid>
+    <ProjectGuid>{56CBCC56-78A8-4D1A-BDC7-5970A51D1EC9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Sonak.Analyzer</RootNamespace>
-    <AssemblyName>Sonak.Analyzer</AssemblyName>
+    <RootNamespace>Sonak</RootNamespace>
+    <AssemblyName>Sonak</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -25,7 +25,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <DocumentationFile>bin\Debug\Sonak.Analyzer.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\Sonak.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -37,14 +37,11 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
-    <ProjectReference Include="..\Sonak\Sonak.csproj">
-      <Project>{56cbcc56-78a8-4d1a-bdc7-5970a51d1ec9}</Project>
-      <Name>Sonak</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Keyboard\UsInternational.cs" />
-    <Compile Include="Layout\Qwerty.cs" />
+    <Compile Include="IKey.cs" />
+    <Compile Include="IKeyboard.cs" />
+    <Compile Include="ILayout.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
