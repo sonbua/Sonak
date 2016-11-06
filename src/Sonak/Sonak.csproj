@@ -39,9 +39,17 @@
     <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IKey.cs" />
-    <Compile Include="IKeyboard.cs" />
-    <Compile Include="ILayout.cs" />
+    <Compile Include="Key.cs" />
+    <Compile Include="Keyboard\IErgoDoxKeyboard.cs" />
+    <Compile Include="Keyboard\IEuropeanKeyboard.cs" />
+    <Compile Include="Keyboard\IKeyboard.cs" />
+    <Compile Include="IRecorder.cs" />
+    <Compile Include="Keyboard\IUsInternationalKeyboard.cs" />
+    <Compile Include="Layout\ILayout.cs" />
+    <Compile Include="ITypist.cs" />
+    <Compile Include="Layout\ILayoutConfiguration.cs" />
+    <Compile Include="Layout\IUsInternationalLayout.cs" />
+    <Compile Include="Layout\KeyAction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

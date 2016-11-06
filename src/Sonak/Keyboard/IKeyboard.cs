@@ -1,6 +1,6 @@
-using System.Collections.Generic;
+using Sonak.Layout;
 
-namespace Sonak
+namespace Sonak.Keyboard
 {
     /// <summary>
     /// Represents a keyboard type, e.g. US-International, European, ErgoDox, etc.
@@ -8,13 +8,13 @@ namespace Sonak
     public interface IKeyboard
     {
         /// <summary>
+        /// The name of the keyboard.
+        /// </summary>
+        string Name { get; }
+
+        /// <summary>
         /// Represents the layout of this keyboard.
         /// </summary>
         ILayout Layout { get; }
-
-        /// <summary>
-        /// Holds a set of keys of this keyboard.
-        /// </summary>
-        IReadOnlyCollection<IKey> Keys { get; }
     }
 }
