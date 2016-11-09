@@ -39,6 +39,9 @@
     <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="KeyCombo.cs" />
+    <Compile Include="SonakConstants.cs" />
+    <Compile Include="Hand.cs" />
     <Compile Include="Key.cs" />
     <Compile Include="Keyboard\IErgoDoxKeyboard.cs" />
     <Compile Include="Keyboard\IEuropeanKeyboard.cs" />

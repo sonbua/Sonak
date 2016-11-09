@@ -1,30 +1,23 @@
 ﻿namespace Sonak
 {
     /// <summary>
-    /// Represents a key on the keyboard, e.g. A, S, D, F, etc.
+    /// Represent an abstraction for left and right hand.
     /// </summary>
-    public class Key
+    public abstract class Hand
     {
         /// <summary>
         /// The default constructor.
         /// </summary>
-        /// <param name="id">The key's ID.</param>
-        /// <param name="description">The key's description.</param>
-        public Key(int id, string description)
+        /// <param name="description">The description to denote a left or right hand.</param>
+        protected Hand(string description)
         {
-            Id = id;
             Description = description;
         }
 
         /// <summary>
-        /// The key ID.
+        /// Denote a left or right hand.
         /// </summary>
-        public int Id { get; }
-
-        /// <summary>
-        /// Describe the position of the key on the keyboard, e.g.: left ring finger upper row, left index finger bottom row, etc.
-        /// </summary>
-        public string Description { get; }
+        protected string Description { get; }
 
         /// <summary>Determines whether the specified object is equal to the current object.</summary>
         /// <returns>true if the specified object  is equal to the current object; otherwise, false.</returns>
@@ -38,7 +31,7 @@
                 return true;
             if (obj.GetType() != GetType())
                 return false;
-            return Equals((Key) obj);
+            return Equals((Hand) obj);
         }
 
         /// <summary>Serves as the default hash function. </summary>
@@ -46,17 +39,17 @@
         /// <filterpriority>2</filterpriority>
         public override int GetHashCode()
         {
-            return Id;
+            return SonakConstants.DefaultHashCode;
         }
 
         /// <summary>
         /// Tests the equality of this instance to other instance.
         /// </summary>
-        /// <param name="other">The other key.</param>
+        /// <param name="other"></param>
         /// <returns></returns>
-        protected bool Equals(Key other)
+        protected bool Equals(Hand other)
         {
-            return Id == other.Id;
+            return true;
         }
     }
 }
