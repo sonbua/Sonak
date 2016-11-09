@@ -45,10 +45,10 @@
   <ItemGroup>
     <Compile Include="DefaultRecorder.cs" />
     <Compile Include="Keyboard\UsInternationalKeyboard.cs" />
-    <Compile Include="Layout\HoldKeyAction.cs" />
-    <Compile Include="Layout\PressKeyAction.cs" />
+    <Compile Include="Layout\KeyAction\HoldKeyAction.cs" />
+    <Compile Include="Layout\KeyAction\PressKeyAction.cs" />
+    <Compile Include="Layout\KeyAction\ReleaseKeyAction.cs" />
     <Compile Include="Layout\QwertyLayout.cs" />
-    <Compile Include="Layout\ReleaseKeyAction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Typist\QwertyTypist.cs" />
   </ItemGroup>
