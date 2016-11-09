@@ -13,6 +13,6 @@ namespace Sonak.Analyzer.Keyboard
 
         public string Name { get; }
 
-        public ILayout Layout { get; protected set; }
+        public ILayout Layout { get; }
     }
 }
