@@ -11,10 +11,11 @@ namespace Sonak.Analyzer.Layout
     {
         public QwertyLayout()
         {
+            Name = "QWERTY";
             Keys = new ReadOnlyCollection<Key>(new List<Key>());
         }
 
-        public string Name => "QWERTY";
+        public string Name { get; }
 
         public IReadOnlyCollection<Key> Keys { get; }
     }
