@@ -8,8 +8,6 @@ namespace Sonak
     /// <summary>
     /// Represent a combination of key presses.
     /// Example: a key combo Ctrl+Shift+A
-    /// Primary key = A
-    /// Modifier keys = Ctrl, Shift
     /// </summary>
     public class KeyCombo
     {
