@@ -6,6 +6,7 @@
     /// Top row: ID = 14..27
     /// Home row: 28..40
     /// Bottom row: 41..52
+    /// Spacebar row: 53..60
     /// </summary>
     public interface IUsInternationalLayout : ILayout
     {

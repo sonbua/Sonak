@@ -18,13 +18,13 @@ namespace Sonak
         /// </summary>
         /// <param name="primaryKey">The primary key.</param>
         /// <param name="modifierKeys">The modifier keys.</param>
-        protected KeyCombo(Key primaryKey, IList<Key> modifierKeys)
+        public KeyCombo(Key primaryKey, IEnumerable<Key> modifierKeys)
         {
             if (modifierKeys == null)
                 throw new ArgumentNullException(nameof(modifierKeys));
 
             PrimaryKey = primaryKey;
-            ModifierKeys = new ReadOnlyCollection<Key>(modifierKeys);
+            ModifierKeys = new ReadOnlyCollection<Key>(modifierKeys.ToArray());
         }
 
         /// <summary>

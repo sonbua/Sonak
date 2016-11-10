@@ -47,6 +47,10 @@
     <Compile Include="Hand\LeftHand.cs" />
     <Compile Include="Hand\RightHand.cs" />
     <Compile Include="Keyboard\UsInternationalKeyboard.cs" />
+    <Compile Include="Keys\UsInternational\LCtrlKey.cs" />
+    <Compile Include="Keys\UsInternational\LShiftKey.cs" />
+    <Compile Include="Keys\UsInternational\RCtrlKey.cs" />
+    <Compile Include="Keys\UsInternational\RShiftKey.cs" />
     <Compile Include="Layout\KeyAction\HoldKeyAction.cs" />
     <Compile Include="Layout\KeyAction\PressKeyAction.cs" />
     <Compile Include="Layout\KeyAction\ReleaseKeyAction.cs" />
