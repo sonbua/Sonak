@@ -13,6 +13,8 @@ namespace Sonak
     /// </summary>
     public class KeyCombo
     {
+        private const string _EMPTY_ENUMERABLE = "{0} is empty.";
+
         /// <summary>
         /// The default constructor.
         /// </summary>
@@ -21,6 +23,8 @@ namespace Sonak
         {
             if (keyActions == null)
                 throw new ArgumentNullException(nameof(keyActions));
+            if (keyActions.Length == 0)
+                throw new ArgumentException(string.Format(_EMPTY_ENUMERABLE, nameof(keyActions)));
 
             KeyActions = new ReadOnlyCollection<KeyAction>(keyActions);
         }
