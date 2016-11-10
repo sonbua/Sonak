@@ -1,6 +1,4 @@
-﻿using Sonak.Layout;
-
-namespace Sonak.Analyzer.Layouts.KeyActions
+﻿namespace Sonak.Analyzer.KeyActions
 {
     /// <summary>
     /// Mimic the action, in which typist presses and then immediately releases the key.

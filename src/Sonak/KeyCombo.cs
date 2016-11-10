@@ -16,26 +16,19 @@ namespace Sonak
         /// <summary>
         /// The default constructor.
         /// </summary>
-        /// <param name="primaryKey">The primary key.</param>
-        /// <param name="modifierKeys">The modifier keys.</param>
-        public KeyCombo(Key primaryKey, IEnumerable<Key> modifierKeys)
+        /// <param name="keyActions">The sequence of key actions needed to produce a certain character.</param>
+        public KeyCombo(params KeyAction[] keyActions)
         {
-            if (modifierKeys == null)
-                throw new ArgumentNullException(nameof(modifierKeys));
+            if (keyActions == null)
+                throw new ArgumentNullException(nameof(keyActions));
 
-            PrimaryKey = primaryKey;
-            ModifierKeys = new ReadOnlyCollection<Key>(modifierKeys.ToArray());
+            KeyActions = new ReadOnlyCollection<KeyAction>(keyActions);
         }
 
         /// <summary>
-        /// The primary key in a combination.
+        /// The sequence of key actions needed to produce a certain character.
         /// </summary>
-        public Key PrimaryKey { get; }
-
-        /// <summary>
-        /// The modifier keys in a combination.
-        /// </summary>
-        public IReadOnlyCollection<Key> ModifierKeys { get; }
+        public IReadOnlyCollection<KeyAction> KeyActions { get; }
 
         /// <summary>Determines whether the specified object is equal to the current object.</summary>
         /// <returns>true if the specified object  is equal to the current object; otherwise, false.</returns>
@@ -57,26 +50,22 @@ namespace Sonak
         /// <filterpriority>2</filterpriority>
         public override int GetHashCode()
         {
-            unchecked
-            {
-                return ((PrimaryKey?.GetHashCode() ?? 0)*397) ^ (ModifierKeys?.GetHashCode() ?? 0);
-            }
+            return KeyActions?.GetHashCode() ?? 0;
         }
 
         /// <summary>
         /// Tests the equality of this instance to other instance.
         /// </summary>
-        /// <param name="other"></param>
+        /// <param name="other">The other object in equality test.</param>
         /// <returns></returns>
         protected bool Equals(KeyCombo other)
         {
-            return Equals(PrimaryKey, other.PrimaryKey) && EqualsImpl(ModifierKeys, other.ModifierKeys);
+            return EqualsImpl(KeyActions, other.KeyActions);
         }
 
-        private static bool EqualsImpl(IReadOnlyCollection<Key> keys, IReadOnlyCollection<Key> otherKeys)
+        private static bool EqualsImpl(IReadOnlyCollection<KeyAction> keys, IReadOnlyCollection<KeyAction> otherKeys)
         {
-            return keys.Count == otherKeys.Count
-                   && keys.OrderBy(x => x.Id).SequenceEqual(otherKeys.OrderBy(x => x.Id));
+            return keys.Count == otherKeys.Count && keys.SequenceEqual(otherKeys);
         }
     }
 }

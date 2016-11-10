@@ -8,11 +8,12 @@ namespace Sonak.Layout
     public interface ILayoutConfiguration
     {
         /// <summary>
-        /// This is a dictionary that holds a map of key combo to character.
+        /// This is a dictionary that holds a map of key combo to keyboard signal.
         /// E.g.: on a US-International QWERTY layout, we will have
-        /// KeyID_29 => 'a'
-        /// Shift + KeyID_29 => 'A'
+        /// KeyID_29 => 'a'-signal
+        /// Shift + KeyID_29 => 'A'-signal
+        /// Backspace => BackspaceCommandSignal, that holds no data
         /// </summary>
-        IReadOnlyDictionary<KeyCombo, char> KeyComboToCharMap { get; }
+        IReadOnlyDictionary<KeyCombo, ISignal> KeyComboToSignalMap { get; }
     }
 }

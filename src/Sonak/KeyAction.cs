@@ -1,4 +1,4 @@
-﻿namespace Sonak.Layout
+﻿namespace Sonak
 {
     /// <summary>
     /// Represent an action with the key, e.g. hold, press, release, etc.
