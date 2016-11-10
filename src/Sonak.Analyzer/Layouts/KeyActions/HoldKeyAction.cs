@@ -1,9 +1,11 @@
-﻿namespace Sonak.Analyzer.Layout.KeyAction
+﻿using Sonak.Layout;
+
+namespace Sonak.Analyzer.Layouts.KeyActions
 {
     /// <summary>
     /// Mimic the action, in which typist holds the key while pressing/holding another key, i.e. combo action.
     /// </summary>
-    internal class HoldKeyAction : Sonak.Layout.KeyAction
+    internal class HoldKeyAction : KeyAction
     {
         public HoldKeyAction(Key key)
             : base(key)

@@ -2,7 +2,7 @@
 using System.Collections.ObjectModel;
 using Sonak.Layout;
 
-namespace Sonak.Analyzer.Layout
+namespace Sonak.Analyzer.Layouts
 {
     /// <summary>
     /// Represents the US-International QWERTY keyboard layout.

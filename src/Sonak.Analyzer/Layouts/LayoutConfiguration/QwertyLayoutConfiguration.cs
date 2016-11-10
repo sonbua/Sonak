@@ -4,7 +4,7 @@ using System.Linq;
 using Sonak.Analyzer.Keys.UsInternational;
 using Sonak.Layout;
 
-namespace Sonak.Analyzer.Layout.LayoutConfiguration
+namespace Sonak.Analyzer.Layouts.LayoutConfiguration
 {
     /// <summary>
     /// Store the configuration for QWERTY layout.

@@ -1,7 +1,7 @@
 ﻿using Sonak.Keyboard;
 using Sonak.Layout;
 
-namespace Sonak.Analyzer.Keyboard
+namespace Sonak.Analyzer.Keyboards
 {
     internal class UsInternationalKeyboard : IUsInternationalKeyboard
     {

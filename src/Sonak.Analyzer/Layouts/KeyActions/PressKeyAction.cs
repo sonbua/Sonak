@@ -1,9 +1,11 @@
-﻿namespace Sonak.Analyzer.Layout.KeyAction
+﻿using Sonak.Layout;
+
+namespace Sonak.Analyzer.Layouts.KeyActions
 {
     /// <summary>
     /// Mimic the action, in which typist presses and then immediately releases the key.
     /// </summary>
-    internal class PressKeyAction : Sonak.Layout.KeyAction
+    internal class PressKeyAction : KeyAction
     {
         public PressKeyAction(Key key)
             : base(key)

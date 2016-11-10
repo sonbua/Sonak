@@ -1,7 +1,7 @@
 ﻿using System;
 using Sonak.Keyboard;
 
-namespace Sonak.Analyzer.Typist
+namespace Sonak.Analyzer.Typists
 {
     /// <summary>
     /// Represents a typist, who works with a QWERTY layout.

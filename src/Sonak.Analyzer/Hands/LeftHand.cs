@@ -1,6 +1,6 @@
-﻿namespace Sonak.Analyzer.Hand
+﻿namespace Sonak.Analyzer.Hands
 {
-    internal class LeftHand : Sonak.Hand
+    internal class LeftHand : Hand
     {
         public LeftHand()
             : base("Left hand")
