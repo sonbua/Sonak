@@ -1,9 +1,9 @@
-namespace Sonak.Keyboard
+namespace Sonak.Analyzer.Keyboards
 {
     /// <summary>
     /// This is a marker interface for European keyboards.
     /// </summary>
-    public interface IEuropeanKeyboard : IKeyboard
+    internal interface IEuropeanKeyboard : IKeyboard
     {
     }
 }

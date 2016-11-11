@@ -44,15 +44,10 @@
     <Compile Include="SonakConstants.cs" />
     <Compile Include="Hand.cs" />
     <Compile Include="Key.cs" />
-    <Compile Include="Keyboard\IErgoDoxKeyboard.cs" />
-    <Compile Include="Keyboard\IEuropeanKeyboard.cs" />
-    <Compile Include="Keyboard\IKeyboard.cs" />
+    <Compile Include="IKeyboard.cs" />
     <Compile Include="IRecorder.cs" />
-    <Compile Include="Keyboard\IUsInternationalKeyboard.cs" />
-    <Compile Include="Layout\ILayout.cs" />
+    <Compile Include="ILayout.cs" />
     <Compile Include="ITypist.cs" />
-    <Compile Include="Layout\ILayoutConfiguration.cs" />
-    <Compile Include="Layout\IUsInternationalLayout.cs" />
     <Compile Include="KeyAction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

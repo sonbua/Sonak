@@ -1,12 +1,17 @@
 ﻿using System.Collections.Generic;
 
-namespace Sonak.Layout
+namespace Sonak
 {
     /// <summary>
-    /// Store the configuration of a specific layout.
+    /// Represents a keyboard layout, e.g. QWERTY, Dvorak, Colemak, etc.
     /// </summary>
-    public interface ILayoutConfiguration
+    public interface ILayout
     {
+        /// <summary>
+        /// The name of this keyboard layout.
+        /// </summary>
+        string Name { get; }
+
         /// <summary>
         /// This is a dictionary that holds a map of key combo to keyboard signal.
         /// E.g.: on a US-International QWERTY layout, we will have

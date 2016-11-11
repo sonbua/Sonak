@@ -1,4 +1,4 @@
-﻿namespace Sonak.Layout
+﻿namespace Sonak.Analyzer.Layouts
 {
     /// <summary>
     /// This is just a marker interface for US-International keyboard layout. Instead of implement this interface, you can implement <see cref="ILayout"/> directly.
@@ -8,7 +8,7 @@
     /// Bottom row: 41..52
     /// Spacebar row: 53..60
     /// </summary>
-    public interface IUsInternationalLayout : ILayout
+    internal interface IUsInternationalLayout : ILayout
     {
     }
 }

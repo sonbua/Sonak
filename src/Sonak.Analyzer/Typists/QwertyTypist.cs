@@ -1,5 +1,4 @@
 ﻿using System;
-using Sonak.Keyboard;
 
 namespace Sonak.Analyzer.Typists
 {

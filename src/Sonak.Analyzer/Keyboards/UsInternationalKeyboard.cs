@@ -1,5 +1,4 @@
-﻿using Sonak.Keyboard;
-using Sonak.Layout;
+﻿using Sonak.Analyzer.Layouts;
 
 namespace Sonak.Analyzer.Keyboards
 {

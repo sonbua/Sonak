@@ -1,6 +1,4 @@
-﻿using Sonak.Keyboard;
-
-namespace Sonak.Analyzer
+﻿namespace Sonak.Analyzer
 {
     /// <summary>
     /// Represents a default recorder, which records typist's movement on a specific keyboard.

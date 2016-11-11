@@ -1,6 +1,4 @@
-using Sonak.Layout;
-
-namespace Sonak.Keyboard
+namespace Sonak
 {
     /// <summary>
     /// Represents a keyboard type, e.g. US-International, European, ErgoDox, etc.

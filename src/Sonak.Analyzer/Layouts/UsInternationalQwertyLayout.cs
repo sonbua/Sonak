@@ -3,17 +3,17 @@ using System.Collections.ObjectModel;
 using Sonak.Analyzer.KeyActions;
 using Sonak.Analyzer.Keys.UsInternational;
 using Sonak.Analyzer.Signals;
-using Sonak.Layout;
 
-namespace Sonak.Analyzer.Layouts.LayoutConfigurations
+namespace Sonak.Analyzer.Layouts
 {
     /// <summary>
-    /// Store the configuration for US-International QWERTY layout.
+    /// Represents the US-International QWERTY keyboard layout.
     /// </summary>
-    internal class QwertyLayoutConfiguration : ILayoutConfiguration
+    internal class UsInternationalQwertyLayout : IUsInternationalLayout
     {
-        public QwertyLayoutConfiguration()
+        public UsInternationalQwertyLayout()
         {
+            Name = "QWERTY";
             KeyComboToSignalMap = new ReadOnlyDictionary<KeyCombo, ISignal>(new Dictionary<KeyCombo, ISignal>
                                                                             {
                                                                                 // Number row
@@ -135,6 +135,8 @@ namespace Sonak.Analyzer.Layouts.LayoutConfigurations
                                                                                 {new KeyCombo(new PressKeyAction(new RCtrlKey())), new ControlKeyCommandSignal()},
                                                                             });
         }
+
+        public string Name { get; }
 
         public IReadOnlyDictionary<KeyCombo, ISignal> KeyComboToSignalMap { get; }
     }

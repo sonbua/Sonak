@@ -46,6 +46,9 @@
     <Compile Include="DefaultRecorder.cs" />
     <Compile Include="Hands\LeftHand.cs" />
     <Compile Include="Hands\RightHand.cs" />
+    <Compile Include="Keyboards\IErgoDoxKeyboard.cs" />
+    <Compile Include="Keyboards\IEuropeanKeyboard.cs" />
+    <Compile Include="Keyboards\IUsInternationalKeyboard.cs" />
     <Compile Include="Keyboards\UsInternationalKeyboard.cs" />
     <Compile Include="Keys\UsInternational\LAltKey.cs" />
     <Compile Include="Keys\UsInternational\LCtrlKey.cs" />
@@ -64,8 +67,8 @@
     <Compile Include="KeyActions\HoldKeyAction.cs" />
     <Compile Include="KeyActions\PressKeyAction.cs" />
     <Compile Include="KeyActions\ReleaseKeyAction.cs" />
-    <Compile Include="Layouts\LayoutConfigurations\QwertyLayoutConfiguration.cs" />
-    <Compile Include="Layouts\QwertyLayout.cs" />
+    <Compile Include="Layouts\IUsInternationalLayout.cs" />
+    <Compile Include="Layouts\UsInternationalQwertyLayout.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Signals\ControlKeyCommandSignal.cs" />
     <Compile Include="Signals\CapsLockCommandSignal.cs" />
