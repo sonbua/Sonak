@@ -62,12 +62,8 @@ namespace Sonak
         /// <returns></returns>
         protected bool Equals(KeyCombo other)
         {
-            return EqualsImpl(KeyActions, other.KeyActions);
-        }
-
-        private static bool EqualsImpl(IReadOnlyCollection<KeyAction> keys, IReadOnlyCollection<KeyAction> otherKeys)
-        {
-            return keys.Count == otherKeys.Count && keys.SequenceEqual(otherKeys);
+            return KeyActions.Count == other.KeyActions.Count
+                   && KeyActions.SequenceEqual(other.KeyActions);
         }
     }
 }
