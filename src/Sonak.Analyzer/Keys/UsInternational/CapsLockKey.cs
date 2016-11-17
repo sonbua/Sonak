@@ -3,7 +3,7 @@
     internal class CapsLockKey : Key
     {
         public CapsLockKey()
-            : base(228, "CapsLock")
+            : base(28, "CapsLock")
         {
         }
     }
