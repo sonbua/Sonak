@@ -32,10 +32,7 @@ namespace Sonak
         /// </summary>
         public IReadOnlyCollection<KeyAction> KeyActions { get; }
 
-        /// <summary>Determines whether the specified object is equal to the current object.</summary>
-        /// <returns>true if the specified object  is equal to the current object; otherwise, false.</returns>
-        /// <param name="obj">The object to compare with the current object. </param>
-        /// <filterpriority>2</filterpriority>
+        /// <inheritdoc />
         public override bool Equals(object obj)
         {
             if (ReferenceEquals(null, obj))
@@ -47,18 +44,13 @@ namespace Sonak
             return Equals((KeyCombo) obj);
         }
 
-        /// <summary>Serves as the default hash function. </summary>
-        /// <returns>A hash code for the current object.</returns>
-        /// <filterpriority>2</filterpriority>
-        public override int GetHashCode()
-        {
-            return KeyActions?.GetHashCode() ?? 0;
-        }
+        /// <inheritdoc />
+        public override int GetHashCode() => KeyActions?.GetHashCode() ?? 0;
 
         /// <summary>
         /// Tests the equality of this instance to other instance.
         /// </summary>
-        /// <param name="other">The other object in equality test.</param>
+        /// <param name="other">The other key combo.</param>
         /// <returns></returns>
         protected bool Equals(KeyCombo other)
         {

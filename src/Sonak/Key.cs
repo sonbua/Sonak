@@ -26,10 +26,7 @@
         /// </summary>
         public string Description { get; }
 
-        /// <summary>Determines whether the specified object is equal to the current object.</summary>
-        /// <returns>true if the specified object  is equal to the current object; otherwise, false.</returns>
-        /// <param name="obj">The object to compare with the current object. </param>
-        /// <filterpriority>2</filterpriority>
+        /// <inheritdoc />
         public override bool Equals(object obj)
         {
             if (ReferenceEquals(null, obj))
@@ -41,22 +38,14 @@
             return Equals((Key) obj);
         }
 
-        /// <summary>Serves as the default hash function. </summary>
-        /// <returns>A hash code for the current object.</returns>
-        /// <filterpriority>2</filterpriority>
-        public override int GetHashCode()
-        {
-            return Id;
-        }
+        /// <inheritdoc />
+        public override int GetHashCode() => Id;
 
         /// <summary>
         /// Tests the equality of this instance to other instance.
         /// </summary>
         /// <param name="other">The other key.</param>
         /// <returns></returns>
-        protected bool Equals(Key other)
-        {
-            return Id == other.Id;
-        }
+        protected bool Equals(Key other) => Id == other.Id;
     }
 }

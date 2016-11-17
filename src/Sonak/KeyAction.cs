@@ -32,19 +32,13 @@
         }
 
         /// <inheritdoc />
-        public override int GetHashCode()
-        {
-            return Key?.GetHashCode() ?? 0;
-        }
+        public override int GetHashCode() => Key?.GetHashCode() ?? 0;
 
         /// <summary>
         /// Tests the equality of this instance to other instance.
         /// </summary>
-        /// <param name="other">The other object in equality test.</param>
+        /// <param name="other">The other key action.</param>
         /// <returns></returns>
-        protected bool Equals(KeyAction other)
-        {
-            return Equals(Key, other.Key);
-        }
+        protected bool Equals(KeyAction other) => Equals(Key, other.Key);
     }
 }

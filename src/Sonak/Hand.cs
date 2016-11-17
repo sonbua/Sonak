@@ -19,10 +19,7 @@
         /// </summary>
         protected string Description { get; }
 
-        /// <summary>Determines whether the specified object is equal to the current object.</summary>
-        /// <returns>true if the specified object  is equal to the current object; otherwise, false.</returns>
-        /// <param name="obj">The object to compare with the current object. </param>
-        /// <filterpriority>2</filterpriority>
+        /// <inheritdoc />
         public override bool Equals(object obj)
         {
             if (ReferenceEquals(null, obj))
@@ -34,22 +31,14 @@
             return Equals((Hand) obj);
         }
 
-        /// <summary>Serves as the default hash function. </summary>
-        /// <returns>A hash code for the current object.</returns>
-        /// <filterpriority>2</filterpriority>
-        public override int GetHashCode()
-        {
-            return SonakConstants.DefaultHashCode;
-        }
+        /// <inheritdoc />
+        public override int GetHashCode() => SonakConstants.DefaultHashCode;
 
         /// <summary>
         /// Tests the equality of this instance to other instance.
         /// </summary>
-        /// <param name="other"></param>
+        /// <param name="other">The other hand.</param>
         /// <returns></returns>
-        protected bool Equals(Hand other)
-        {
-            return true;
-        }
+        protected bool Equals(Hand other) => true;
     }
 }
